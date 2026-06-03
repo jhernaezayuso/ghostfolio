@@ -1,6 +1,9 @@
 import { ConfirmationDialogType } from '@ghostfolio/common/enums';
 
 export interface AlertParams {
+  bodyText?: string;
+  copyConfirmationText?: string;
+  copyText?: string;
   discardFn?: () => void;
   discardLabel?: string;
   message?: string;

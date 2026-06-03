@@ -212,8 +212,15 @@ export class GfAdminJobsComponent implements OnInit {
   }
 
   protected onViewStacktrace(aStacktrace: AdminJobs['jobs'][0]['stacktrace']) {
+    const stacktrace = aStacktrace?.join('\n') ?? '';
+
+    const stacktraceLabel = $localize`:@@8679466541625917686:Stacktrace`;
+
     this.notificationService.alert({
-      title: JSON.stringify(aStacktrace, null, '  ')
+      bodyText: stacktrace,
+      copyConfirmationText: $localize`${stacktraceLabel} has been copied to the clipboard`,
+      copyText: stacktrace,
+      title: stacktraceLabel
     });
   }
 

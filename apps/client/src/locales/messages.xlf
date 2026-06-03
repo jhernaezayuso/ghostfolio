@@ -7959,6 +7959,13 @@
           <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="8679466541625917686" datatype="html">
+        <source>Stacktrace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/client/src/app/components/admin-jobs/admin-jobs.component.ts</context>
+          <context context-type="linenumber">221</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

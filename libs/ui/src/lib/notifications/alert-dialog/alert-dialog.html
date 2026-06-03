@@ -2,10 +2,26 @@
   <div mat-dialog-title [innerHTML]="title"></div>
 }
 
-@if (message) {
+@if (bodyText) {
+  <div mat-dialog-content>
+    <pre>{{ bodyText }}</pre>
+  </div>
+} @else if (message) {
   <div mat-dialog-content [innerHTML]="message"></div>
 }
 
 <div align="end" mat-dialog-actions>
+  @if (copyText) {
+    <button
+      class="no-height no-min-width p-1"
+      i18n-title
+      mat-button
+      title="Copy to clipboard"
+      type="button"
+      (click)="onCopyToClipboard()"
+    >
+      <ion-icon class="text-muted" name="copy-outline" />
+    </button>
+  }
   <button mat-button (click)="dialogRef.close()">{{ discardLabel }}</button>
 </div>
